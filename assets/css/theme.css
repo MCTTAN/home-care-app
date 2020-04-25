@@ -73,12 +73,12 @@ Notes:	decreasing heading by 0.4em with every subsequent heading level
   font-size: 45px;
   text-align: center;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', serif;
   /* font-weight: bold; */
   text-decoration: none;
 }
 
-input[type="text"] { font-family: 'Montserrat', sans-serif; }
+input[type="text"] { font-family: 'Quicksand', serif; }
 
 * {
     margin: 0;
@@ -108,7 +108,7 @@ button {
   border-width: 10px;
   font-weight: 600;
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', serif;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -126,7 +126,7 @@ button {
   border-width: 10px;
   font-weight: 600;
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', serif;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -148,7 +148,7 @@ input, textarea {
 }
 
 input, button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', serif;
     font-weight: 700;
 }
 
@@ -177,16 +177,16 @@ p { margin: 0; }
 
 /* ----- Typography ----- */
 
-::-webkit-input-placeholder { font-family: 'Montserrat', sans-serif; }
+::-webkit-input-placeholder { font-family: 'Quicksand', serif; }
 
-:-moz-placeholder { font-family: 'Montserrat', sans-serif; }
+:-moz-placeholder { font-family: 'Quicksand', serif; }
 
-::-moz-placeholder { font-family: 'Montserrat', sans-serif; }
+::-moz-placeholder { font-family: 'Quicksand', serif; }
 
-:-ms-input-placeholder { font-family: 'Montserrat', sans-serif; }
+:-ms-input-placeholder { font-family: 'Quicksand', serif; }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.625;
@@ -196,7 +196,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', serif;
     color: #333333;
     font-weight: 700;
     margin: 0;
@@ -763,7 +763,7 @@ section {
 /* ----- Input ----- */
 
 textarea {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', serif;
   font-weight: 400;
   line-height: 43px;
   font-size: 14px;
@@ -782,7 +782,7 @@ textarea {
 }
 
 .au-input {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', serif;
     font-weight: 400;
     line-height: 43px;
     font-size: 14px;
@@ -803,7 +803,7 @@ textarea {
 }
 
 .au-input-tags {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', serif;
     font-weight: 400;
     line-height: 43px;
     font-size: 14px;
@@ -824,7 +824,7 @@ textarea {
 }
 
 .au-input-transparent {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', serif;
     font-weight: 400;
     line-height: 43px;
     font-size: 14px;
@@ -884,7 +884,7 @@ textarea {
 
 
 .au-input-tags-transparent {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', serif;
     font-weight: 400;
     line-height: 43px;
     font-size: 14px;
@@ -1354,7 +1354,7 @@ textarea {
 }
 
 .account-item > .content > a:after {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', serif;
     font-weight: 500;
     content: '\f2f9';
     display: inline-block;
@@ -1675,7 +1675,7 @@ textarea {
 
 .header-mobile .navbar-mobile .navbar-mobile__list li.has-dropdown > a:after {
     content: '\f105';
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', serif;
     float: right;
     font-size: 16px;
     line-height: 22px;
