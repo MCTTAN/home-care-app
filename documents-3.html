@@ -49,52 +49,52 @@
   <!-- Required Meta Tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Chantal">
-  
-  <!-- GOOGLE DRIVE PICKER -->
+
+  <!-- START - GOOGLE DRIVE PICKER -->
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Google Picker Example</title>
 
-     <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
-  <script>
-      function onApiLoad(){
-          gapi.load('auth',{'callback':onAuthApiLoad}); 
-          gapi.load('picker'); 
-      }
-      function onAuthApiLoad(){
-          window.gapi.auth.authorize({
-              'client_id':'422619975258-036umikhojfo1i8tq6cp1ejcltoh6lns.apps.googleusercontent.com',
-              'scope':['https://www.googleapis.com/auth/drive']
-          },handleAuthResult);
-      } 
-      var oauthToken;
-      function handleAuthResult(authResult){
-          if(authResult && !authResult.error){
-              oauthToken = authResult.access_token;
-              createPicker();
-          }
-      }
-      function createPicker(){    
-          var picker = new google.picker.PickerBuilder()
-              .addView(new google.picker.DocsUploadView())
-              .addView(new google.picker.DocsView())                
-              .setOAuthToken(oauthToken)
-              .setDeveloperKey('AIzaSyAHkFjZk2JFtXVIOGZIXXx5noPz1XQaNbo')
-              .setCallback(pickerCallback)
-              .build();
-          picker.setVisible(true);
-      }
-  
-      function pickerCallback(data) {
-          var url = 'nothing';
-          if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
-            var doc = data[google.picker.Response.DOCUMENTS][0];
-            url = doc[google.picker.Document.URL];
-          }
-          var message = 'You picked: ' + url;
-          document.getElementById('result').innerHTML = message;
-        }
-  </script>
+   <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+        <script>
+            function onApiLoad() {
+                gapi.load('auth', { 'callback': onAuthApiLoad });
+                gapi.load('picker');
+            }
+            function onAuthApiLoad() {
+                window.gapi.auth.authorize({
+                    'client_id': '422619975258-036umikhojfo1i8tq6cp1ejcltoh6lns.apps.googleusercontent.com',
+                    'scope': ['https://www.googleapis.com/auth/drive']
+                }, handleAuthResult);
+            }
+            var oauthToken;
+            function handleAuthResult(authResult) {
+                if (authResult && !authResult.error) {
+                    oauthToken = authResult.access_token;
+                    createPicker();
+                }
+            }
+            function createPicker() {
+                var picker = new google.picker.PickerBuilder()
+                    //.addView(new google.picker.DocsUploadView())
+                    .addView(new google.picker.DocsView())
+                    .setOAuthToken(oauthToken)
+                    //.setDeveloperKey('AIzaSyDPs9U-dgOC9h1jRFNwOwhRtARCph8_3HM')
+                    .setCallback(pickerCallback)
+                    .build();
+                picker.setVisible(true);
+            }
 
+            function pickerCallback(data) {
+                var url = 'nothing';
+                if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
+                    var doc = data[google.picker.Response.DOCUMENTS][0];
+                    url = doc[google.picker.Document.URL];
+                }
+                var message = 'You picked: ' + url;
+                document.getElementById('result').innerHTML = message;
+            }
+        </script>
+  <!-- END - GOOGLE DRIVE PICKER -->
 </head>
 
 <body class="animsition">
@@ -126,10 +126,10 @@
       <nav class="navbar-mobile">
         <div class="container-fluid">
           <ul class="navbar-mobile__list list-unstyled">
-            <li class="active has-sub">
+            <li>
               <a href="index.html">Home</a>
             </li>
-            <li>
+            <li class="active has-sub">
               <a href="documents.html">Documents</a>
             </li>
             <li>
@@ -171,10 +171,10 @@
       <div class="menu-sidebar__content js-scrollbar1">
         <nav class="navbar-sidebar">
           <ul class="list-unstyled navbar__list">
-            <li class="active has-sub">
+            <li>
               <a href="index.html">Home</a>
             </li>
-            <li>
+            <li class="active has-sub">
               <a href="documents.html">Documents</a>
             </li>
             <li>
