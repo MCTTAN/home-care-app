@@ -155,8 +155,7 @@
       function displayInbox() {
         var request = gapi.client.gmail.users.messages.list({
           'userId': 'me',
-          'labelIds': 'INBOX',
-          'maxResults': 10
+          'labelIds': 'INBOX'
         });
         request.execute(function(response) {
           $.each(response.messages, function() {
