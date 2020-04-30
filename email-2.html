@@ -109,9 +109,18 @@
       var clientId = '422619975258-036umikhojfo1i8tq6cp1ejcltoh6lns.apps.googleusercontent.com';
       var apiKey = 'AIzaSyAHkFjZk2JFtXVIOGZIXXx5noPz1XQaNbo';
       var scopes =
-        'https://www.googleapis.com/auth/gmail.readonly '+
+        //'https://www.googleapis.com/auth/gmail.readonly '+
         'https://www.googleapis.com/auth/gmail.send';
 
+      function deleteMessage(userId, messageId) {
+        var request = gapi.client.gmail.users.messages.delete({
+          'userId': userId,
+          'id': messageId
+        });
+        request.execute(
+          function(resp) { });
+      }
+      
       function handleClientLoad() {
         gapi.client.setApiKey(apiKey);
         window.setTimeout(checkAuth, 1);
@@ -155,7 +164,8 @@
       function displayInbox() {
         var request = gapi.client.gmail.users.messages.list({
           'userId': 'me',
-          'labelIds': 'INBOX'
+          'labelIds': 'INBOX',
+          'maxResults': 9999
         });
         request.execute(function(response) {
           $.each(response.messages, function() {
