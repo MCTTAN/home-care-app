@@ -175,11 +175,12 @@ p { margin: 0; }
     border-radius: 5px;
     border-color: transparent;
     background-color: #A10364;
+    color: #fff !important;
 }
 
-.btn-primary{ background-color: #A10364; border-color: transparent;}
+.btn a { color: #fff !important; }
 
-.btn-primary:hover { background-color: #A10364; border-color: transparent; }
+.btn a:hover { color: #fff !important; }
 
 /* ----- Typography ----- */
 
