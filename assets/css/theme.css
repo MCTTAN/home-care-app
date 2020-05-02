@@ -1135,7 +1135,7 @@ textarea {
 
 /* ----- Header ----- */
 .header-desktop {
-    background: #f5f5f5;
+    background: #510024;
     /*
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
@@ -1292,11 +1292,11 @@ textarea {
     .noti__item { margin-right: 20px; }
 }
 
-.noti__item:hover i { color: #999; }
+.noti__item:hover i { color: rgba(188, 165, 174, 1.0); }
 
 .noti__item i {
     font-size: 30px;
-    color: #7c7c7c;
+    color: rgba(188, 165, 174, 1.0);
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -1502,13 +1502,13 @@ textarea {
     left: 0;
     top: 0;
     bottom: 0;
-    background: #f5f5f5;
+    background: #510024;
     overflow-y: auto;
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid rgba(188, 165, 174, 0.5);
 }
 
 .menu-sidebar .logo {
-    background: #f5f5f5;
+    background: #510024;
     height: 75px;
     padding: 0 35px;
     display: -webkit-box;
@@ -1552,17 +1552,18 @@ textarea {
 
 .navbar-sidebar .navbar__list li a {
     display: block;
-    color: #555;
+    color: #BCA5AE;
+    font-weight: 400;
     font-size: 16px;
     padding: 15px 0;
 }
 
 .navbar-sidebar .navbar__list li a i { margin-right: 19px; }
 
-.navbar-sidebar .navbar__list li a:hover { color: #2948ff; }
+.navbar-sidebar .navbar__list li a:hover { }
 
 .navbar-sidebar .navbar__list li.active > a {
-    color: #2948ff;
+    color: #fff;
     font-weight: 500;
 }
 
