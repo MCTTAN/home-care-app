@@ -2,10 +2,8 @@
 
 /* SOLIDS */
 
-.blue-gradient {
-  background-image: -moz-linear-gradient(90deg, #396afc 0%, #2948ff 100%);
-  background-image: -webkit-linear-gradient(90deg, #396afc 0%, #2948ff 100%);
-  background-image: -ms-linear-gradient(90deg, #396afc 0%, #2948ff 100%);
+.default-color {
+  background-color: #A10364;
 }
 
 .blue { background-color: rgb(0, 185, 247); }
