@@ -1,0 +1,35 @@
+function StartClockifyTimer() {
+          // Starts a timer based on the current sheet
+          // Step 1: Find PID
+            var ss = SpreadsheetApp.getActiveSpreadsheet();
+            var sheet = ss.getActiveSheet();
+            var FileNo = sheet.getSheetName();
+            var url = 'https://api.clockify.me/api/v1/workspaces/[workspaceid]/projects?name='+FileNo
+            const header = {
+              "headers": {
+                "X-Api-Key" : "[apikey]",
+                "content-type" : "application/json",
+                "Accept" : "*/*"
+                }
+            };
+            var response = UrlFetchApp.fetch(url, header)
+            var json = response.getContentText();
+            var data = JSON.parse(json);
+            var PID = data[0]["id"];
+            Logger.log(PID);
+          
+          //Step 2: Use PID to start timer
+            timezone = "GMT+" + new Date().getTimezoneOffset();
+            var date = Utilities.formatDate(new Date(), timezone, "yyyy-MM-dd'T'HH:mm:ss'Z'");
+            var headers = {"X-Api-Key" : "[apikey]", "content-type" : "application/json"};
+            var payload = JSON.stringify({'start' : date, 'projectId' : PID});
+            var clockifyoptions = {
+            'muteHttpExceptions' : true,
+            'method' : 'post',
+            'headers' : headers,
+            'payload' : payload
+            };
+            UrlFetchApp.fetch('https://api.clockify.me/api/v1/workspaces/[workspaceid]/time-entries/', clockifyoptions);
+          }
+          
+        }
